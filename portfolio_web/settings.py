@@ -54,21 +54,21 @@ ROOT_URLCONF = 'portfolio_web.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backend.django.djangoTemplates',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
-            'context-processor':
-                'django.template.context-processor.debug',
-                'django.template.context-processor.request',
-                'django.contrib.auth.context-processor.auth',
-                'django.contrib.message.context-processor.message',
-            
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'portfolio_web.asgi.application'
+WSGI_APPLICATION = 'portfolio_web.wsgi.application'
 
 
 # Database
@@ -76,8 +76,8 @@ WSGI_APPLICATION = 'portfolio_web.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backend.mysql',
-        'NAME': BASE_DIR / 'db.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
