@@ -65,9 +65,13 @@ h6 { font-size: 16px;}
 }
 
 .s2{
-	background-color: var(--secondaryColor);
+	/* background-color: var(--secondaryColor);
 	border-bottom:1px solid var(--borderColor);
-	overflow:auto;
+	overflow:auto; */
+
+	background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
 }
 
 
@@ -291,7 +295,8 @@ h6 { font-size: 16px;}
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	padding-bottom: 50px;
 	padding-top: 50px;
-	gap:100px;
+	
+	box-shadow: 1px 1px;
 }
 
 
